@@ -8,13 +8,20 @@
     
 </head>
 <body>
-    <body>
-        <h1 id="title">заголовок який видалиться при натисненні на кнопку</h1>
+        
             <button id="button">Видалити заголовок</button>
+            <button onclick="function2()"> Повернути</button>
+            <h1 id="title">заголовок який видалиться при натисненні на кнопку</h1>
         <script>
             document.querySelector('button').onclick = myFunction;
             function myFunction(){
-                  document.getElementById('title').remove();
+                  document.querySelector('h1').remove();
+            }
+            function function2(){
+                var h = document.createElement("H1"); // Create the H1 element 
+                var t = document.createTextNode("заголовок який видалиться при натисненні на кнопку"); // Create a text element 
+                h.appendChild(t); // Append the text node to the H1 element 
+                document.body.appendChild(h)
             }
         </script>
 </body>
