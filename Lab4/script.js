@@ -40,7 +40,7 @@ function findSmallestNumberAmongMixedElements(arr){
     let flag = false;
     let min;
     arr.forEach(element => {
-        if(Number.isInteger(element)==true){
+        if(Number.isInteger(element)){
             flag = true;
             min = element;
         } 
@@ -52,7 +52,6 @@ function findSmallestNumberAmongMixedElements(arr){
                 min = element;
             }
         }
-        
     });
     return min;
 }
@@ -76,6 +75,7 @@ function convertScoreToGrade(number){
     if (number <= 59 && number>=35)return "Fx";
     if (number <= 34 && number>=0)return "F";
     if(number>100 || number <0) return "INVALID SCORE";
+    
 }
 console.log(convertScoreToGrade(56));
 
@@ -95,3 +95,16 @@ function multiply(num1, num2){
     return num1 / (1 / num2);
 }
 console.log(multiply(5,5))
+
+function computeSumBetween(a, b) {
+    if (a > b) {
+      return 0;
+    }
+    let sum = 0;
+    for (let i = a; i < b; i++) {
+      sum += i;
+    }
+    return sum;
+  }
+
+  console.log(computeSumBetween(2,5))
