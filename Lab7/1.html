@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <CENTER>
+        <H1 ID='zag'> ВАСЬКА</h1> 
+        Варіант, сумісний з Mozilla
+        <P>  
+        <FORM NAME='f1'>  
+        <INPUT TYPE=BUTTON name="bot" onclick=bm() value='Збільшити'>  </FORM >  
+        <P> <IMG src="images/catm.jpg" ID='Vas' onclick=bm()>  
+    </CENTER>
+    <SCRIPT>  
+        var msg='' 
+         for(i=0; i<document.all.length;i++) 
+        msg+=i + ' ' + document.all[i].tagName +' ID=' + document.all[i].id+'\n' 
+        alert(msg)  
+        flag=true 
+        function bm() 
+        { if(flag){
+            document.images[0].src='images/Cat_August_2010-4.jpg';
+            flag=false; 
+            document.forms[0].bot.value="Зменшити" 
+            document.forms[0].bot.style.background='red' 
+            document.all.bot.style.color='black'; 
+        } 
+        else{ 
+            document.getElementById("Vas").src='images/catm.jpg'; 
+            document.forms[0].bot.value="Збільшити" 
+            document.forms[0].bot.style.background='green' 
+            document.all.bot.style.color='white'; flag= true 
+        } 
+        } 
+        </script>
+        
+</body>
+</html>
