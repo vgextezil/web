@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>П'ять подій з мишкою</h1>
+    <h2 onclick="clickOnH2()">Клацніть на мене мишкою</h2>
+    <h3 onmousedown="onMouseDown()", onmouseup = "onMouseUp()" >На цьому тексті натисніть, потримайте і відпустіть ліву кнопку мишки</h3>
+    <h4 onmouseover="onMouseOver()", onmouseout = "onMouseOut()">Повільно проведіть курсором мишки по цій надписі</h4>
+
+    <script>
+        function clickOnH2(){
+            let h2 = document.getElementsByTagName("h2")[0];
+            if(h2.style.color == ""){
+                h2.style.color = "white";
+                h2.style.fontSize = "48pt";
+                h2.style.backgroundColor = "blue";
+                }
+            else{
+                h2.style.color = "";
+                h2.style.fontSize = "";
+                h2.style.backgroundColor = "";
+            } 
+        }
+        function onMouseDown(){
+            let h3 = document.getElementsByTagName("h3")[0];
+            h3.style.backgroundColor = "green";
+        }
+
+        function onMouseUp(){
+            let h3 = document.getElementsByTagName("h3")[0];
+            h3.style.backgroundColor = "yellow";
+        }
+        function onMouseOver(){
+            let h4 = document.getElementsByTagName("h4")[0];
+            h4.style.backgroundColor = "red";
+        }
+        function onMouseOut(){
+            let h4 = document.getElementsByTagName("h4")[0];
+            h4.style.backgroundColor = "blue";
+        }
+    </script>
+</body>
+</html>
