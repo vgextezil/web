@@ -29,12 +29,12 @@ var obj = {
 
 function getProductOfAllElementsAtProperty(object,key){
     
-    if(object.keu === undefined) return 0;
-    if(object.keu.length===0) return 0;
-    if(Array.isArray(object.keu)===false) return 0;
+    if(object.key === undefined) return 0;
+    if(object.key.length===0) return 0;
+    if(Array.isArray(object.key)===false) return 0;
     else{
         let dobutok = 1;
-        object.keu.forEach(element => {
+        object.key.forEach(element => {
             dobutok*=element
         });
         return dobutok;
