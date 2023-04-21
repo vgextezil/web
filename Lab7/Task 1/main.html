@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1.1</title>
+</head>
+<body>
+    <h2 onclick="clickOnH2()" id="h2">Доступ до властивостей і методів</h2>
+    <p onclick="clickOnP()">Колекція all</p>
+    <div id="div">Метод getElementById ()</div>
+    <script>
+        function clickOnH2(){
+        let h2 = document.getElementById("h2");
+        let div = document.getElementById("div");
+        if(h2.style.color == "white"){
+            h2.style.color = "black";
+            div.style.color = "black";
+        }
+        else{
+            h2.style.color = "white";
+            div.style.color = "white";
+        } 
+        if(h2.style.backgroundColor == "yellow"){
+            h2.style.backgroundColor = "blue";
+            div.style.backgroundColor = "blue";
+        }
+        else{ 
+            h2.style.backgroundColor = "yellow";
+            div.style.backgroundColor = "yellow";
+        }
+        }
+        function clickOnP(){
+            let p = document.all[11];
+            if(p.style.color=="red"){
+                p.style.color = "white";
+            }
+            else p.style.color = "red";
+            
+            if(p.style.backgroundColor == "white"){
+                p.style.backgroundColor = "green";
+            }
+            else p.style.backgroundColor = "white"
+        }
+
+    </script>
+</body>
+</html>
